@@ -15,6 +15,7 @@
     "xpath": "0.0.5",
     "request": "~2.12.0",
     "xmldom": "~0.1.13",
-    "xmlBodyParser": "git://github.com/ferlores/express-xmlBodyParser.git"
+    "xmlBodyParser": "git://github.com/ferlores/express-xmlBodyParser.git",
+    "passport-azure-store": "~0.1.0"
   }
 }

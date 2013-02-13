@@ -3,12 +3,23 @@ var winston = require('winston'),
     async = require('async'),
     crypto = require('crypto'),
     moment = require('moment'),
+    passport = require('passport'),
+    AzureStoreStrategy = require('passport-azure-store').Strategy,
     xmlBodyParser = require('xmlBodyParser').xmlBodyParser;
 
 var utils = require('./utils');
 
 var tempdata = require('./db/tempdata'),
     tenants = require('./db/tenants');
+
+passport.use(new AzureStoreStrategy({
+  secret: process.env.AZURE_SSO_SECRET,
+  check_expiration: true
+}, function(req, azureInfo, done) {
+  var user_id = azureInfo.subscription_id + '_' + azureInfo.cloud_service_name + '_' + azureInfo.resource_name; // you can do anything with this data, typically you would have to find the user based on this data somehow
+  // lookup in DB
+  done(null, user);
+}));
 
 function loadRoutes(app) {
   app.post('/webhooks/azure/subscriptions/:subscription_id/Events', xmlBodyParser, suscription, errorHandler);
@@ -19,6 +30,15 @@ function loadRoutes(app) {
   
   // sso
   app.post('/webhooks/azure/subscriptions/:subscription_id/cloudservices/:cloud_service_name/resources/:resource_type/:resource_name/SsoToken', xmlBodyParser, getToken, ssoErrorHandler);
+
+  app.get('/webhooks/azure/sso',
+    passport.authenticate('azure-store'),
+    function(req, res) {
+      if (!req.user)
+        res.redirect('/login'); // whatever
+
+      next();
+  });
 }
 
 function errorHandler(err, req, res, next) {
