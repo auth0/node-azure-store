@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns="http://schemas.microsoft.com/windowsazure">
+    <CloudServiceSettings>  
+        <GeoRegion>East US</GeoRegion>
+    </CloudServiceSettings> 
+    <ETag><%=ETag%></ETag>
+    <Name><%=resource_name%></Name>
+    <OperationStatus>
+        <Result>Succeeded</Result>
+    </OperationStatus>
+    <!-- add the output items that you need -->
+    <!--
+    <OutputItems>
+        <OutputItem>
+            <Key>url</Key>
+            <Value>some value from the template</Value>
+        </OutputItem>
+    </OutputItems>
+    -->
+    <Plan>free</Plan>
+    <State>Started</State>
+    <SubState>Waiting for your API calls</SubState>
+</Resource>

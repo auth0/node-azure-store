@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EntityEvent>
+    <EventId>766ed3be-11be-4a88-a7c8-ba4286299066</EventId>
+    <EntityType>Subscription</EntityType>
+    <EntityState>Enabled</EntityState>
+    <EntityId>
+        <Id>1234</Id>
+        <Created>2012-10-12T06:42:36.8265209Z</Created>
+    </EntityId>
+    <OperationId>ae9a07ef-2306-40e0-bbe5-2821352a8c4d</OperationId>
+    <Properties>
+        <EntityProperty>
+            <PropertyName>ResourceType</PropertyName>
+            <PropertyValue>authentication</PropertyValue>
+        </EntityProperty>
+        <EntityProperty>
+            <PropertyName>EMail</PropertyName>
+            <PropertyValue>someone@contoso.com</PropertyValue>
+        </EntityProperty>
+        <EntityProperty>
+            <PropertyName>OptIn</PropertyName>
+            <PropertyValue>True</PropertyValue>
+        </EntityProperty>
+    </Properties>
+</EntityEvent>

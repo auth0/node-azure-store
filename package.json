@@ -1,0 +1,20 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "3.0.0",
+    "jade": "*",
+    "async": "~0.2.5",
+    "moment": "~2.0.0",
+    "winston": "~0.6.2",
+    "ejs": "~0.8.3",
+    "xpath": "0.0.5",
+    "request": "~2.12.0",
+    "xmldom": "~0.1.13",
+    "xmlBodyParser": "git://github.com/ferlores/express-xmlBodyParser.git"
+  }
+}

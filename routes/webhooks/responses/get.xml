@@ -1,0 +1,18 @@
+<CloudService xmlns="http://schemas.microsoft.com/windowsazure">
+    <GeoRegion>East US</GeoRegion>
+    <Resources>
+        <% resources.forEach(function(r) { %>
+        <Resource>
+            <ETag><%= r.azure.etag %></ETag>
+            <Name><%= r.azure.resource_name %></Name>
+            <OperationStatus>
+                <Result>Succeeded</Result>
+            </OperationStatus>
+            <Plan>free</Plan>
+            <State>Started</State>
+            <SubState>Waiting for your API calls</SubState>
+            <Type>authentication</Type>
+        </Resource>
+        <% }) %>
+    </Resources>
+</CloudService>

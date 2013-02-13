@@ -1,0 +1,21 @@
+<ResourceManifest>
+    <Test>
+        <ResourceProviderEndpoint>http://localhost:3000/webhooks/azure</ResourceProviderEndpoint>
+        <ResourceProviderSsoEndpoint>http://localhost:8989/azure/sso</ResourceProviderSsoEndpoint>
+    </Test>
+    <Prod>
+        <ResourceProviderEndpoint>https://api.auth0.com/webhooks/azure</ResourceProviderEndpoint>
+        <ResourceProviderSsoEndpoint>https://app.auth0.com/azure/sso</ResourceProviderSsoEndpoint>
+    </Prod>
+    <OutputKeys>
+        <OutputKey>
+            <Name>url</Name>
+        </OutputKey>
+        <OutputKey>
+            <Name>client_id</Name>
+        </OutputKey>
+        <OutputKey>
+            <Name>client_secret</Name>
+        </OutputKey>
+    </OutputKeys>
+</ResourceManifest>
