@@ -9,11 +9,13 @@ This template has been created factoring out what we did for [Auth0](http://auth
 
 It comes with a set of tests that will exercise the hooks that will do (not all but most of) the tests that dukaan does.
 
-You can run them with mocha
+You can run them with `mocha`, like this:
 
-```
-mocha
-```
+  mocha
+
+If you don't have `mocha` installed, install it like this:
+
+  npm install -g mocha
 
 ## TODO
 
